@@ -1,0 +1,97 @@
+GIT	Version-Control System
+***
+A piece of software that helps you keep track of your computer programs and files
+and the changes that are made to them over time. 
+It also allows you to collaborate with your peers on a program, code, or file. 
+(the version control software GitHub is built on).
+
+
+Configure GIT on local machine at the Command Line Interface:
+$ git config --global user.name "AndrasGitServer"
+$ git config --global user.email "andras_pc@hotmail.com"
+$ cat .gitconfig	(in home folder)
+
+
+NOTE: the GitHub repository is a *FOLDER*
+To Clone a GitHub repository to your Git_local_workspace folder:
+1) Go to your GitHub account and click on the repository name.
+2) Click on Clone or download button.
+3) Copy the URL given in the box.
+4) Go to your local CLI and type command & paste URL: 
+   $ git clone https://github.com/AndrasGitServer/Hello-World.git
+
+
+$ git status			(new files in the local folder are color: RED)
+$ git add helloWorld.txt
+$ git status			(added files in the local folder are color: GREEN)
+$ git commit -m "First .txt file comment"	(file is not in the GitHub account YET).
+
+$ git push -u origin master	(provide UserName & password for GitHub
+				 & files will be added to *GitHub* repository)
+
+
+
+GitHub 
+******
+And similar services (including GitLab and BitBucket) are websites that host
+a Git server program to hold your code.
+Is a code hosting platform for version control and collaboration. 
+It lets you and others work together on projects from anywhere.
+Is a platform where you can upload your code for others to see.
+
+
+Supply chain management (SCM) 
+*****************************
+Is the broad range of activities required to
+plan, control and execute a product's flow, 
+from acquiring raw materials and production through distribution to the final customer,
+in the most streamlined and cost-effective way possible.
+
+
+The Git repository is hosted on GitHub. (remote).
+
+
+GITHUB Step 1. Create a Repository
+----------------------------------
+A repository is usually used to organize a single project. 
+Repositories can contain folders and files, images, videos, spreadsheets, 
+and data sets – anything your project needs. 
+    *********
+We recommend including a README, or a file with information about your project. 
+GitHub makes it easy to add one at the same time you create your new repository.
+
+To create a new repository:
+-In the upper right corner, next to your avatar or identicon, click  and then select New repository.
+-Name your repository hello-world.
+-Write a short description.
+-Select Initialize this repository with a README.
+-Click Create repository.
+
+
+
+GITHUB Step 2. Create a Branch
+------------------------------
+Branching is the way to work on different versions of a repository at one time.
+By default your repository has one branch named master 
+                                                ******
+which is considered to be the definitive branch. 
+We use branches to experiment and make edits before committing them to master.
+When you create a branch off the master branch, you’re making a copy, or snapshot, of master as it was at that point in time. If someone else made changes to the master branch while you were working on your branch, you could pull in those updates.
+Have you ever saved different versions of a file? Something like:
+
+story.txt
+story-joe-edit.txt
+story-joe-edit-reviewed.txt
+Branches accomplish similar goals in GitHub repositories.
+
+Here at GitHub, our developers, writers, and designers use branches for keeping bug fixes and feature work separate from our master (production) branch. 
+When a change is ready, they merge their branch into master.
+                             *****
+To create a new branch:
+-Go to your new repository hello-world.
+-Click the drop down at the top of the file list that says branch: master.
+-Type a branch name, readme-edits, into the new branch text box.
+-Select the blue Create branch box or hit “Enter” on your keyboard.
+Now you have two branches, master and readme-edits. They look exactly the same, 
+but not for long! Next we’ll add our changes to the new branch.
+
