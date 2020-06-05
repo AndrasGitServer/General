@@ -1,21 +1,58 @@
-GIT	Version-Control System
+GIT	Version Control System (VCS)
 ***
 A piece of software that helps you keep track of your computer programs and files
 and the changes that are made to them over time. 
+(tracking changes in files).
 It also allows you to collaborate with your peers on a program, code, or file. 
 (the version control software GitHub is built on).
 Create a backup of our code.
 
 
-Configure GIT on local machine at the Command Line Interface:
+Characteristics
+***************
+- Distributed (decentralized) version control: many developers can work on the
+  same project without having to be on the same network.
+- Coodinates work between multiple developers & tracks every single change that is
+  made on the project.
+- Who made what changes & when.
+- Revert back at any time.
+- You have a repository on your local machine, where you work on & make changes.
+- Push your local repository to the remote repository (GitHub or BitBucket).
+- Keeps track of your code history.
+- Takes "snapshots" of your files.
+- You decide when to take a "snapshot" by making a COMMIT.
+- you stage files before commiting.
+
+
+Step 1)
+*******
+Create a local folder and go inside,
+and type the following commands to initialize this repository (repo):
+
+$ mkdir local_repo
+$ cd local_repo
+$ git init
+
+Note: if you did this already then you will get a message:
+Reinitialized existing Git repository in <current_directory>/.git/
+(.git is a directory)
+
+
+Step 2) (Do only once on your computer ?)
+*******
+Configure GIT on local machine at the Command Line Interface (CLI) to work with GitHub:
+
 $ git config --global user.name "AndrasGitServer"
 $ git config --global user.email "andras_pc@hotmail.com"
 $ cat .gitconfig	(in home folder)
 
 
 Configuring GitHub after local repository is init & GitHub new repository is created:
+*************************************************************************************
+$ git remote
 $ git remote add origin https://github.com/my_account_name/new_repo_name
 $ git push -u origin master
+$ git remote
 
 
 NOTE: the GitHub repository is a *FOLDER*
@@ -27,32 +64,47 @@ To Clone a GitHub repository to your Git_local_workspace folder or another direc
    $ git clone https://github.com/AndrasGitServer/Hello-World.git
 
 
+LOCAL GIT REPOSITORY COMMANDS
+*****************************
+$ git init		Initialize local Git repository !
+				.git folder is created.
+
+
 $ git status			(new files in the local folder (working directory) are color: RED)
 				(that's different from the repository that's not currently in Staging)
 				(changed).
 				(if you type $ git status in a folder that is not initialized,
 				 it will give you an error:
 				 fatal: not a Git repository (there is no .git file)).
-
-
-$ git add helloWorld.txt
-or $ git add .			(prepare all the files adding them to the Staging Area).
-				(all files that are changed or different from the last backup
-				 created in the repository).
-
-
-$ git status			(added files in the local folder Staging Area are color: GREEN)
+				(added files in the local folder Staging Area are color: GREEN)
 				(will show you what is currently in the Staging Area,
 				 and also what are some of the files in your working directory
 				 that are different from the last backup).
 				(we can get the status of the differences)
-				(what are the differences between the working directory and the repository).
+				(what are the differences between the working directory and
+				 the repository).
+
+
+
+$ git add helloWorld.txt	Add file to staging area.
+or				(prepare all the files adding them to the Staging Area).
+$ git add .			(all files that are changed or different from the last backup
+				 created in the repository).
+
+
 $ git diff			(line-by-line differences).
 
 
 $ git commit -m "First .txt file comment"	(file is not in the GitHub account YET).
 						(send all files from the Staging Area to the local repository).
 
+
+$ git remote			Shows if a remote repository has been added (connected) to your local repository
+
+
+
+Working with remote repositories (GitHub)(add remote service)
+*************************************************************
 
 $ git push			(files added without UserName & password)
 
@@ -66,6 +118,13 @@ $ git log			(all the backups in the repo with their messages that you typed).
 
 
 $ git blame <file_name>		(will tell who wrote the lines of code).
+
+
+$ git pull			Pull the latest changes from Remote Repository
+
+
+$ git clone			Copy a remote repository into your local folder
+				(download to your machine)
 
 
 GitHub 
@@ -132,13 +191,6 @@ To create a new branch:
 Now you have two branches, master and readme-edits. They look exactly the same, 
 but not for long! Next we’ll add our changes to the new branch.
 
-Create a local folder and go inside and type the following commands to initialize this repository (repo):
-$ mkdir local_repo
-$ cd local_repo
-$ git init
-Note: if you did this already then you will get a message:
-Reinitialized existing Git repository in <current_directory>/.git/
-(.git is a directory)
 
 $ git push				(push your master branch to the origin (online) ).
 $ git pull
@@ -146,4 +198,48 @@ $ git clone __ <url>
 $ git remote add origin __ <url>
 
 $ git [enter]				(shows common Git commands, meaning Git is installed !).
+
+
+Create a branch on the local repository & switch branches
+*********************************************************
+Note: the branch name will change from (master) -> (<branch_name>)
+$ git branch <branch_name>
+$ git checkout <branch_name>
+
+
+Merge a branch to the master branch on Git
+******************************************
+$ git checkout master
+$ git merge <branch_name>
+
+
+
+General (June 5, 2020)
+----------------------
+Find the name of the remote repo (on GitHub), go inside your local repo .git (root of your working tree)
+$  git  remote  -v
+
+
+Rename the name of the remote repo (on GitHub)
+(Rename a GitHub repository) (change the name on GitHub)
+Note: the URL will also change !
+a) On the web sign in your GitHub account
+b) Navigate to the main page of the repository
+c) Click SETTINGS
+d) Under the Repository Name heading, type the new name of your repository
+e) Click RENAME
+
+
+Updating an existing local clone to point to the new repository name (web URL)
+(You need the new URL, on GitHub click on the button CLONE OR DOWNLOAD and copy it)
+$  git  remote  set-url  origin  <new_url>
+$  git  remote  set-url  origin  https://github.com/AndrasGitServer/General.git
+
+
+Confirm the change of name locally
+$  git  remote  -v
+
+
+
+
 
