@@ -1,0 +1,115 @@
+An interactive website
+   ***********
+
+
+is essentially an Internet page that uses different kinds of software to create a rich,
+interactive experience for the user 
+(i.e. it facilitates the user to be actively engaged with the site. )
+(For e.g. Let's take the case of a website that displays weather forecasts)
+
+
+An interactive website 
+creates interaction between users and content allowing 
+them to have a personalized experience and go beyond the usual browsing and viewing. 
+Users are the ones who usually provide most of the content here.
+
+
+Having an interactivity can help generate more traffic in your site and increase user engagement.
+
+
+If you’re a marketer, an interactive content is very useful as a marketing tool; 
+it can provide you with information about your target demographic. 
+In creating one, take into consideration that interactive content comes in different forms. 
+Not all will work well with your users. 
+In strategizing your content, make sure that it matches your audience.
+
+
+https://www.webdesigners-directory.com/blog/2018-04/8-ways-to-make-your-website-more-interactive/
+
+
+----------------------------------------------------------------------
+
+
+JS Events
+   ******
+
+
+- HTML events are "things" that happen to HTML elements.
+- When|if JavaScript is used in HTML pages, JavaScript can "react" on these events.
+- When events happen, you may want to do something.
+- JavaScript lets you execute code when events are detected.
+- An HTML event can be something the browser does, or something a user does.
+  (who|what caused the event)
+- HTML DOM events allow JavaScript to register different event handlers 
+  on elements in an HTML document.
+- Events are normally used in combination with functions, 
+  and the function will not be executed before the event occurs.
+
+
+Examples of HTML events:
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+
+
+HTML allows (to be added to HTML elements):
+event handler attributes, with JavaScript code.
+************************  **** ***************     
+
+
+<HTML_element event_key_word = 'JavaScript_code' />
+
+
+In the following example, an onclick attribute (with code), is added to a <button> element:
+
+
+<button onclick="document.getElementById('demo').innerHTML = Date()"> The time is </button>
+
+
+Common HTML DOM events:
+**********************
+
+
+Event			Description
+-----			-----------
+onchange		An HTML element has been changed
+onclick			The user clicks an HTML element
+onmouseover		The user moves the mouse over an HTML element
+onmouseout		The user moves the mouse away from an HTML element
+onkeydown		The user pushes a keyboard key
+onload			The browser has finished loading the page
+
+
+The list is much longer: W3Schools JavaScript Reference HTML DOM Events.
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+What can JavaScript Do ?
+************************
+
+
+Event handlers can be used to handle, and verify, user input, user actions, and browser actions:
+
+
+Things that should be done every time a page loads
+Things that should be done when the page is closed
+Action that should be performed when a user clicks a button
+Content that should be verified when a user inputs data
+And more ...
+
+
+Many different methods can be used to let JavaScript work with events:
+
+
+HTML event attributes can execute JavaScript code directly
+HTML event attributes can call JavaScript functions
+You can assign your own event handler functions to HTML elements
+You can prevent events from being sent or being handled
+And more ...
+
+
+You will learn a lot more about events and event handlers in the HTML DOM chapters.
+                                                                 ********
+
+
+ 

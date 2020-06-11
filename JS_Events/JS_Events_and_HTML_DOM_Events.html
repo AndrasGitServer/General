@@ -1,0 +1,33 @@
+<!--
+    2020 June 11 Thursday
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2 id="id_1"> Click the button to display the date. </h2>
+
+    <button onclick="document.getElementById('id_1').innerHTML=Date()"> (By Id) The time is </button>
+
+    <p></p>
+
+    <button onclick="this.innerHTML=Date()"> (this) The time is </button>
+
+    <p></p>
+
+    <h3 id="id_2"></h3>
+    
+    <button onclick="displayDate()"> (function) The time is </button>
+
+    <script>
+    
+        function displayDate() {
+            document.getElementById("id_2").innerHTML = Date();
+        }
+    
+    </script>
+
+</body>
+</html>
+
