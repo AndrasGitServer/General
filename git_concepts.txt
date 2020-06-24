@@ -8,6 +8,15 @@ It also allows you to collaborate with your peers on a program, code, or file.
 Create a backup of our code.
 
 
+Overview (what to study)
+********
+1- Explain background (general) info
+2- Tools
+3- Get it running on your system
+4- Get it set up to start working with
+
+
+
 Characteristics
 ***************
 - Distributed (decentralized) version control: many developers can work on the
@@ -240,6 +249,115 @@ Confirm the change of name locally
 $  git  remote  -v
 
 
+
+Git (and pull request workflows) tutorial YouTube
+--------------------------------
+
+
+- Git has 3 states (groups) that we can have files in our projects
+  (We move files from one state to another with git commands | verbs)
+  Working Directory	<->	Staging Area	<->	.git directory (Git Repository) (Committed files)
+  
+
+- Working Directory has untracked and modified files, we list these with the git status command.
+
+
+- Staging Area (stage fixes) has the files we organize that we want to commit to our local Git Repository.
+  (the reason is that we can pick & choose, detailed individual files or groups of files)
+  (what we want to be committed)
+  we also list these files with the git status command.
+
+
+- .git directory has the committed files.
+
+
+- Install Git locally (on your machine)
+and then in Git bash run:
+$ git --version
+
+
+- Set up global configuration variables (set config values) (configure Git)
+$ git config --global user.name  "your_username_unique_or_github_name"
+$ git config --global user.email "andras_pc@hotmail.com"
+
+
+- List all configuration variables (values)
+$ git config --list
+
+
+- Need help (man pages)
+$ git help <verb>
+	or
+$ git <verb> --help
+
+
+- If you ever want to stop tracking a project with Git, 
+  remove the .git directory within our project
+$ rm -rf .git
+
+
+2 common scenarios:
+1) An existing project on your local machine (local repo), that you want to start tracking using Git
+   (you have a local code base that you want to start tracking using Git)
+   run the command from within the directory in Git bash:
+   $ git init
+   (creates a .git directory)
+
+	or
+
+2) An existing project remotely (remote repo), that you want to start developing on
+   (clone a remote repository) (will copy the files & folders within the remote repo)
+   $ git clone <url_remote_repo_GITHUB> <path_to_local_directory>
+
+   View info about the remote repo
+   $ git remote -v
+	or
+   $ git branch -a
+
+
+- Show tracked and untracked files (in our working directory area and in our stage area)
+  (changes that will be committed)
+$ git status
+
+
+- Files that we do NOT want (to add) in our repository for other people to see,
+  (files that contain personal preferences, specific to our machine or our OS)
+  (are NOT part of the code that we want to track)
+  (Ignore these files)
+  Create a .gitignore file:
+  $ touch .gitignore
+  Open this file in your text editor and add files you do not want to track:
+  $ code .gitignore
+  run git status again to see the .gitignore file included, we want to commit .gitignore !
+  $ git status
+
+
+- Add all files to the Staging area
+$ git add -A
+
+
+- Remove files from the Staging area to the working directory
+$ git reset <file_name>
+	or
+$ git reset
+
+
+- Commit files from the staging area to the local Git repository
+$ git commit -m "commit message indicating your changes to the code"
+
+
+- We can see the commits we have made with Hash numbers, author and email
+$ git log
+
+
+- Push files with changes to a remote repo, do a pull also:
+$ git pull origin master
+$ git push origin master
+
+
+
+Git Branches
+------------
 
 
 
