@@ -1,4 +1,4 @@
-GIT	Version Control System (VCS)
+GIT	Version Control System (VCS) (Revision Control System)
 ***
 A piece of software that helps you keep track of your computer programs and files
 and the changes that are made to them over time. 
@@ -8,12 +8,14 @@ It also allows you to collaborate with your peers on a program, code, or file.
 Create a backup of our code.
 
 
-Overview (what to study)
+Overview (what to study)(a professional | developer)(a person has to know & do)(skill set)
 ********
-1- Explain background (general) info
-2- Tools
-3- Get it running on your system
-4- Get it set up to start working with
+1- Explain background (general info)
+2- Tools (what are the tools needed)
+3- Installation (how to install)
+4- Configurarion (debug, secure)
+5- Get it running on your system (environment)
+6- Get it set up to start working with (ecosystem)(explore)
 
 
 
